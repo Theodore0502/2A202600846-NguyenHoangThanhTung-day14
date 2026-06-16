@@ -128,7 +128,13 @@ reports\benchmark_results.json
 reports\baseline_results.json
 ```
 
-Ví dụ kết quả đạt chuẩn:
+### So sánh kết quả Agent V1 và V2
+
+Dưới đây là minh chứng kết quả chạy E2E Benchmark thực tế, cho thấy sự cải thiện hiệu suất từ bản V1 (Baseline) lên bản V2 (Optimized):
+
+![Kết quả Regression Summary](Screenshot%202026-06-16%20222421.png)
+
+Ví dụ kết quả đạt chuẩn trên console:
 
 ```text
 --- Regression Summary ---
