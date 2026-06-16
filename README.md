@@ -1,8 +1,5 @@
 # Lab 14 - AI Evaluation Benchmarking
 
-## BÁO CÁO NHÓM VÀ CÁ NHÂN (REPORT TEMPLATE)
-*Ghi chú: Điền thông tin vào phần này để nộp báo cáo cho giảng viên.*
-
 ## BÁO CÁO CÁ NHÂN (INDIVIDUAL REPORT)
 
 - **Họ và Tên:** Nguyễn Hoàng Thanh Tùng
@@ -10,10 +7,11 @@
 - **Mục tiêu:** Thực hiện Lab cá nhân để rèn luyện và thử nghiệm năng lực xây dựng/debug hệ thống AI Evaluation Benchmarking.
 
 ### 🏆 Các công việc đã hoàn thành & Bài học rút ra:
+
 1. **Thiết kế E2E Pipeline Đa Mô Hình (Multi-Model):** Tích hợp thành công nhiều model Qwen khác nhau (`qwen-flash`, `qwen-plus-2025-07-14`, v.v.) vào từng Agent riêng biệt (SDG, Agent V1, Agent V2, Strict Judge, Semantic Judge).
 2. **Nâng cấp Synthetic Data Generator:** Cấu hình lại LLM để tạo ra 59 test cases hóc búa, vượt mốc 50 cases yêu cầu của bài Lab.
 3. **Debug & Tối ưu Hệ thống Giám khảo (LLM Judge):** Viết lại Regex Parser để bóc tách chính xác điểm số từ LLM (vượt qua lỗi LLM trả về các thẻ Markdown dư thừa, tránh điểm 0.0 oan uổng).
-4. **Xử lý triệt để lỗi API 429 Rate Limit:** Triển khai cơ chế *Exponential Backoff* (tự động sleep và thử lại) trong `llm_client.py` và giảm concurrency batch size, giúp pipeline chạy ổn định liên tục trên DashScope mà không bị ngắt kết nối.
+4. **Xử lý triệt để lỗi API 429 Rate Limit:** Triển khai cơ chế _Exponential Backoff_ (tự động sleep và thử lại) trong `llm_client.py` và giảm concurrency batch size, giúp pipeline chạy ổn định liên tục trên DashScope mà không bị ngắt kết nối.
 5. **Đánh bại Baseline:** Hệ thống V2 hoàn thiện đạt điểm số 4.51/5.0 (so với V1 là 1.10), hoàn thành xuất sắc Release Gate.
 
 ---
@@ -230,4 +228,3 @@ python check_lab.py
 - `reports\summary.json`
 - `reports\benchmark_results.json`
 - `analysis\failure_analysis.md`
-
