@@ -30,7 +30,7 @@ class BenchmarkRunner:
         status = "fail" if final_score < 3.0 else "pass"
         
         verdict = "✅" if status == "pass" else "❌"
-        print(f"  {verdict} [{index}/{total}] Q: {test_case['question'][:40]}... | Score: {final_score}/5.0 | Tokens: {tokens_used} | Cost: ${cost_usd:.6f} | Agent Lat: {latency:.2f}s | Judge Lat: {judge_latency:.2f}s", flush=True)
+        print(f"  {verdict} [{index}/{total}] Q: {test_case['question'][:40]}... | A: {response['answer'][:40]}... | Score: {final_score}/5.0 | Tokens: {tokens_used} | Cost: ${cost_usd:.6f} | Agent Lat: {latency:.2f}s | Judge Lat: {judge_latency:.2f}s", flush=True)
 
         return {
             "id": test_case.get("metadata", {}).get("source_doc_id", "unknown"),
