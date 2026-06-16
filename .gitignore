@@ -1,0 +1,20 @@
+.env
+__pycache__/
+*.pyc
+.DS_Store
+
+# Ignore terminal logs but KEEP reports and golden_set for submission
+result.txt
+test_api.log
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# Reviews
+review.md

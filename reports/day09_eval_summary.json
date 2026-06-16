@@ -1,0 +1,21 @@
+{
+  "metadata": {
+    "version": "Day09_ShoppingAssistant",
+    "total_cases": 22,
+    "concurrency_workers": 5,
+    "timestamp": "2026-06-16 17:41:59"
+  },
+  "metrics": {
+    "avg_score": 4.37,
+    "pass_rate": 0.82,
+    "pass_count": 18,
+    "fail_count": 4
+  },
+  "performance": {
+    "wall_time_seconds": 899.89,
+    "sequential_time_seconds": 3975.35,
+    "speedup_ratio": 4.42,
+    "avg_agent_latency": 175.33,
+    "avg_judge_latency": 5.36
+  }
+}

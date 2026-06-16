@@ -1,0 +1,867 @@
+[
+  {
+    "id": "Q01",
+    "question": "Chính sách hoàn trả hàng ra sao?",
+    "expected_route": [
+      "policy"
+    ],
+    "expected_status": "ok",
+    "expected_contains": [
+      "15 ngày",
+      "trả hàng"
+    ],
+    "actual_route": {
+      "status": "ok",
+      "needs_policy": true,
+      "needs_data": false,
+      "clarification_question": null
+    },
+    "actual_status": "ok",
+    "status_match": true,
+    "final_answer": "Answer: Chính sách hoàn trả hàng cho phép khách hàng nhận lại tiền vào ví nội bộ, tài khoản ngân hàng hoặc thẻ thanh toán của họ. Thời gian nhận được tiền thực tế có thể bị ảnh hưởng bởi cổng thanh toán, ngân hàng phát hành và trạng thái đối soát.",
+    "agent_latency": 136.0128,
+    "judge_latency": 41.5433,
+    "total_latency": 177.5561,
+    "judge": {
+      "final_score": 1.25,
+      "agreement_rate": 0.875,
+      "individual_scores": {
+        "judge_strict": 1.0,
+        "judge_semantic": 1.5
+      },
+      "resolution": "average",
+      "rubrics": {
+        "information_coverage": "1-5: answer contains the semantic meaning of all required expected_contains elements.",
+        "correct_status": "Status matches expected status."
+      },
+      "reasoning": {
+        "judge_strict": "[Regex Parsed] SCORE|REASONING\n1.0|The answer does not contain the required elements \"15 ngày\" and \"trả hàng\". It provides information about refund policies but lacks the specific time frame (15 days) and the action of returning goods.",
+        "judge_semantic": "[Regex Parsed] SCORE: 1.5\nREASONING: The answer does not contain the key elements \"15 ngày\" and \"trả hàng\". While it mentions a return policy in general terms, it lacks specific information about a 15-day period for returns or the act of returning goods."
+      }
+    },
+    "status": "fail"
+  },
+  {
+    "id": "Q02",
+    "question": "Giao hàng tiêu chuẩn thường mất bao lâu?",
+    "expected_route": [
+      "policy"
+    ],
+    "expected_status": "ok",
+    "expected_contains": [],
+    "actual_route": {
+      "status": "ok",
+      "needs_policy": true,
+      "needs_data": false,
+      "clarification_question": null
+    },
+    "actual_status": "ok",
+    "status_match": true,
+    "final_answer": "Answer: Thời gian giao hàng tiêu chuẩn thường phụ thuộc vào vị trí nhận hàng và tình trạng đơn hàng, nhưng không được nêu rõ trong chính sách. Tuy nhiên, thông tin cụ thể về thời gian sẽ được cung cấp khi bạn đặt hàng.",
+    "agent_latency": 120.8173,
+    "judge_latency": 0.0,
+    "total_latency": 120.8173,
+    "judge": {
+      "final_score": 5.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "judge_strict": 5.0,
+        "judge_semantic": 5.0
+      },
+      "resolution": "auto_pass_no_expected_contains",
+      "rubrics": {
+        "information_coverage": "1-5: answer contains the semantic meaning of all required expected_contains elements.",
+        "correct_status": "Status matches expected status."
+      },
+      "reasoning": {
+        "judge_strict": "No constraints",
+        "judge_semantic": "No constraints"
+      }
+    },
+    "status": "pass"
+  },
+  {
+    "id": "Q03",
+    "question": "Khách có được kiểm hàng khi nhận không?",
+    "expected_route": [
+      "policy"
+    ],
+    "expected_status": "ok",
+    "expected_contains": [],
+    "actual_route": {
+      "status": "ok",
+      "needs_policy": true,
+      "needs_data": false,
+      "clarification_question": null
+    },
+    "actual_status": "ok",
+    "status_match": true,
+    "final_answer": "Answer: Khách hàng được phép kiểm tra ngoại quan gói hàng trước khi xác nhận nhận hàng. Tuy nhiên, việc dùng thử sâu, lắp đặt, kích hoạt hoặc sử dụng lâu dài không thuộc phạm vi 'kiểm hàng tại chỗ'.",
+    "agent_latency": 141.4114,
+    "judge_latency": 0.0,
+    "total_latency": 141.4114,
+    "judge": {
+      "final_score": 5.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "judge_strict": 5.0,
+        "judge_semantic": 5.0
+      },
+      "resolution": "auto_pass_no_expected_contains",
+      "rubrics": {
+        "information_coverage": "1-5: answer contains the semantic meaning of all required expected_contains elements.",
+        "correct_status": "Status matches expected status."
+      },
+      "reasoning": {
+        "judge_strict": "No constraints",
+        "judge_semantic": "No constraints"
+      }
+    },
+    "status": "pass"
+  },
+  {
+    "id": "Q04",
+    "question": "Voucher có được hoàn lại khi hủy đơn không?",
+    "expected_route": [
+      "policy"
+    ],
+    "expected_status": "ok",
+    "expected_contains": [],
+    "actual_route": {
+      "status": "ok",
+      "needs_policy": true,
+      "needs_data": false,
+      "clarification_question": null
+    },
+    "actual_status": "ok",
+    "status_match": true,
+    "final_answer": "Answer: Voucher có thể được hoàn lại khi hủy đơn, nhưng điều này phụ thuộc vào tình trạng của voucher và chiến dịch khuyến mãi. Một số loại voucher như voucher số lượng giới hạn đã hết lượt hoặc voucher livestream đã hết hiệu lực không được hoàn lại. Bạn nên kiểm tra thông tin chi tiết về voucher của mình để đảm bảo có thể hoàn lại khi hủy đơn.\nPolicy: Sử dụng\nOrder data: Không dùng",
+    "agent_latency": 129.3848,
+    "judge_latency": 0.0,
+    "total_latency": 129.3848,
+    "judge": {
+      "final_score": 5.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "judge_strict": 5.0,
+        "judge_semantic": 5.0
+      },
+      "resolution": "auto_pass_no_expected_contains",
+      "rubrics": {
+        "information_coverage": "1-5: answer contains the semantic meaning of all required expected_contains elements.",
+        "correct_status": "Status matches expected status."
+      },
+      "reasoning": {
+        "judge_strict": "No constraints",
+        "judge_semantic": "No constraints"
+      }
+    },
+    "status": "pass"
+  },
+  {
+    "id": "Q05",
+    "question": "Các trường hợp nào thường không hỗ trợ trả hàng?",
+    "expected_route": [
+      "policy"
+    ],
+    "expected_status": "ok",
+    "expected_contains": [],
+    "actual_route": {
+      "status": "ok",
+      "needs_policy": true,
+      "needs_data": false,
+      "clarification_question": null
+    },
+    "actual_status": "ok",
+    "status_match": true,
+    "final_answer": "Answer: Các trường hợp thường không hỗ trợ trả hàng bao gồm sản phẩm tiêu dùng đã mở niêm phong, thực phẩm tươi sống và đông lạnh sau khi giao thành công, đồ lót, mỹ phẩm đã qua sử dụng, phần mềm, thẻ quà tặng điện tử, mã nạp điện tử, hàng đặt riêng hoặc cá nhân hóa theo yêu cầu, sản phẩm bị hư hỏng do khách sử dụng sai hướng dẫn, và khách gửi lại sai hàng, thiếu phụ kiện hoặc không đúng serial. Policy: Sử dụng chính sách từ \"5.3. Các trường hợp không hỗ trợ trả hàng\".",
+    "agent_latency": 115.3206,
+    "judge_latency": 0.0,
+    "total_latency": 115.3206,
+    "judge": {
+      "final_score": 5.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "judge_strict": 5.0,
+        "judge_semantic": 5.0
+      },
+      "resolution": "auto_pass_no_expected_contains",
+      "rubrics": {
+        "information_coverage": "1-5: answer contains the semantic meaning of all required expected_contains elements.",
+        "correct_status": "Status matches expected status."
+      },
+      "reasoning": {
+        "judge_strict": "No constraints",
+        "judge_semantic": "No constraints"
+      }
+    },
+    "status": "pass"
+  },
+  {
+    "id": "Q06",
+    "question": "Đơn hàng 1971 bao giờ được giao?",
+    "expected_route": [
+      "data"
+    ],
+    "expected_status": "ok",
+    "expected_contains": [],
+    "actual_route": {
+      "status": "ok",
+      "needs_policy": false,
+      "needs_data": true,
+      "clarification_question": null
+    },
+    "actual_status": "ok",
+    "status_match": true,
+    "final_answer": "Answer: Đơn hàng 1971 được giao vào ngày 09/06/2026.",
+    "agent_latency": 193.9126,
+    "judge_latency": 0.0,
+    "total_latency": 193.9126,
+    "judge": {
+      "final_score": 5.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "judge_strict": 5.0,
+        "judge_semantic": 5.0
+      },
+      "resolution": "auto_pass_no_expected_contains",
+      "rubrics": {
+        "information_coverage": "1-5: answer contains the semantic meaning of all required expected_contains elements.",
+        "correct_status": "Status matches expected status."
+      },
+      "reasoning": {
+        "judge_strict": "No constraints",
+        "judge_semantic": "No constraints"
+      }
+    },
+    "status": "pass"
+  },
+  {
+    "id": "Q07",
+    "question": "Cho tôi xem danh sách đơn hàng của khách hàng C001",
+    "expected_route": [
+      "data"
+    ],
+    "expected_status": "ok",
+    "expected_contains": [],
+    "actual_route": {
+      "status": "ok",
+      "needs_policy": false,
+      "needs_data": true,
+      "clarification_question": null
+    },
+    "actual_status": "ok",
+    "status_match": true,
+    "final_answer": "Answer: Khách hàng C001 có 4 đơn hàng gần đây như sau:\n- Đơn hàng số 1971 đang trong quá trình giao, dự kiến đến tay người nhận vào ngày 2026-06-09.\n- Đơn hàng số 1901 đã hoàn thành và không có yêu cầu xử lý thêm.\n- Đơn hàng số 2160 đang trên đường giao.\n- Đơn hàng số 2259 đã hoàn thành và không có yêu cầu xử lý thêm.",
+    "agent_latency": 199.9285,
+    "judge_latency": 0.0,
+    "total_latency": 199.9285,
+    "judge": {
+      "final_score": 5.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "judge_strict": 5.0,
+        "judge_semantic": 5.0
+      },
+      "resolution": "auto_pass_no_expected_contains",
+      "rubrics": {
+        "information_coverage": "1-5: answer contains the semantic meaning of all required expected_contains elements.",
+        "correct_status": "Status matches expected status."
+      },
+      "reasoning": {
+        "judge_strict": "No constraints",
+        "judge_semantic": "No constraints"
+      }
+    },
+    "status": "pass"
+  },
+  {
+    "id": "Q08",
+    "question": "Voucher của khách hàng C001 còn những mã nào dùng được?",
+    "expected_route": [
+      "data"
+    ],
+    "expected_status": "ok",
+    "expected_contains": [],
+    "actual_route": {
+      "status": "ok",
+      "needs_policy": false,
+      "needs_data": true,
+      "clarification_question": null
+    },
+    "actual_status": "ok",
+    "status_match": true,
+    "final_answer": "Answer: Khách hàng C001 còn mã voucher C001-BDAY-0626 dùng được. Đây là loại voucher sinh nhật, giảm giá cố định 50,000 VND và có thể sử dụng khi đơn hàng tối thiểu là 399,000 VND. Mã này chỉ còn lại 1 lần sử dụng.",
+    "agent_latency": 198.9697,
+    "judge_latency": 0.0,
+    "total_latency": 198.9697,
+    "judge": {
+      "final_score": 5.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "judge_strict": 5.0,
+        "judge_semantic": 5.0
+      },
+      "resolution": "auto_pass_no_expected_contains",
+      "rubrics": {
+        "information_coverage": "1-5: answer contains the semantic meaning of all required expected_contains elements.",
+        "correct_status": "Status matches expected status."
+      },
+      "reasoning": {
+        "judge_strict": "No constraints",
+        "judge_semantic": "No constraints"
+      }
+    },
+    "status": "pass"
+  },
+  {
+    "id": "Q09",
+    "question": "Khách hàng C001 thuộc hạng gì và còn quota voucher bao nhiêu?",
+    "expected_route": [
+      "data"
+    ],
+    "expected_status": "ok",
+    "expected_contains": [],
+    "actual_route": {
+      "status": "ok",
+      "needs_policy": false,
+      "needs_data": true,
+      "clarification_question": null
+    },
+    "actual_status": "ok",
+    "status_match": true,
+    "final_answer": "Answer: Khách hàng C001 thuộc hạng Gold và còn quota voucher là 6.",
+    "agent_latency": 239.3416,
+    "judge_latency": 0.0,
+    "total_latency": 239.3417,
+    "judge": {
+      "final_score": 5.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "judge_strict": 5.0,
+        "judge_semantic": 5.0
+      },
+      "resolution": "auto_pass_no_expected_contains",
+      "rubrics": {
+        "information_coverage": "1-5: answer contains the semantic meaning of all required expected_contains elements.",
+        "correct_status": "Status matches expected status."
+      },
+      "reasoning": {
+        "judge_strict": "No constraints",
+        "judge_semantic": "No constraints"
+      }
+    },
+    "status": "pass"
+  },
+  {
+    "id": "Q10",
+    "question": "Đơn hàng 2058 đang ở trạng thái nào?",
+    "expected_route": [
+      "data"
+    ],
+    "expected_status": "ok",
+    "expected_contains": [],
+    "actual_route": {
+      "status": "ok",
+      "needs_policy": false,
+      "needs_data": true,
+      "clarification_question": null
+    },
+    "actual_status": "ok",
+    "status_match": true,
+    "final_answer": "Answer: Đơn hàng số 2058 đang ở trạng thái đã được giao thành công và vẫn còn trong thời gian hỗ trợ trả hàng.",
+    "agent_latency": 267.3935,
+    "judge_latency": 0.0,
+    "total_latency": 267.3935,
+    "judge": {
+      "final_score": 5.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "judge_strict": 5.0,
+        "judge_semantic": 5.0
+      },
+      "resolution": "auto_pass_no_expected_contains",
+      "rubrics": {
+        "information_coverage": "1-5: answer contains the semantic meaning of all required expected_contains elements.",
+        "correct_status": "Status matches expected status."
+      },
+      "reasoning": {
+        "judge_strict": "No constraints",
+        "judge_semantic": "No constraints"
+      }
+    },
+    "status": "pass"
+  },
+  {
+    "id": "Q11",
+    "question": "Đơn hàng 1971 có được hoàn trả không?",
+    "expected_route": [
+      "data",
+      "policy"
+    ],
+    "expected_status": "ok",
+    "expected_contains": [
+      "1971",
+      "chưa thể"
+    ],
+    "actual_route": {
+      "status": "ok",
+      "needs_policy": true,
+      "needs_data": true,
+      "clarification_question": null
+    },
+    "actual_status": "ok",
+    "status_match": true,
+    "final_answer": "Answer: Đơn hàng 1971 hiện tại không thể hoàn trả vì nó đang trong quá trình giao. Để bắt đầu quy trình hoàn trả, bạn cần đợi đến khi sản phẩm đã được giao (trạng thái `delivered`). Thời hạn hoàn trả là 15 ngày kể từ khi đơn hàng được tạo, do đó nếu đơn hàng của bạn vẫn nằm trong thời gian này, bạn có thể hoàn trả sau khi nhận được sản phẩm.",
+    "agent_latency": 319.5423,
+    "judge_latency": 76.4432,
+    "total_latency": 395.9856,
+    "judge": {
+      "final_score": 3.9,
+      "agreement_rate": 0.95,
+      "individual_scores": {
+        "judge_strict": 3.8,
+        "judge_semantic": 4.0
+      },
+      "resolution": "average",
+      "rubrics": {
+        "information_coverage": "1-5: answer contains the semantic meaning of all required expected_contains elements.",
+        "correct_status": "Status matches expected status."
+      },
+      "reasoning": {
+        "judge_strict": "[Regex Parsed] SCORE|REASONING\n3.8| 答案中包含了“1971”，但没有明确包含“ chưa thể”（不能）。虽然答案解释了为什么订单目前无法退货，但它并没有直接使用“ chưa thể”这个词。因此，评分不是满分。",
+        "judge_semantic": "[Regex Parsed] SCORE: 4.0\nREASONING: The answer contains the number \"1971\" and conveys that it cannot be returned at present (\"chưa thể\"), which aligns with the expected meaning. It also provides additional context about the return process, which is relevant but not strictly required by the question."
+      }
+    },
+    "status": "pass"
+  },
+  {
+    "id": "Q12",
+    "question": "Đơn hàng 2058 còn trong thời gian trả hàng không?",
+    "expected_route": [
+      "data",
+      "policy"
+    ],
+    "expected_status": "ok",
+    "expected_contains": [],
+    "actual_route": {
+      "status": "ok",
+      "needs_policy": true,
+      "needs_data": true,
+      "clarification_question": null
+    },
+    "actual_status": "ok",
+    "status_match": true,
+    "final_answer": "Answer: Đơn hàng số 2058 của khách hàng Võ Thanh Quân vẫn còn trong thời gian hỗ trợ trả hàng theo chính sách của VinShop Demo. Thời gian này kết thúc vào ngày 16 tháng 6 năm 2026, do đó bạn có thể tiếp tục chờ nhận hàng hoặc liên hệ bộ phận hỗ trợ để được tư vấn thêm nếu cần thiết.\nEvidence:\n- Policy: Chính sách của VinShop Demo cho phép thời gian hoàn trả đơn hàng.\n- Order data: Đơn hàng số 2058 đã được giao thành công vào ngày 17 tháng 6 năm 2026 và thời gian hỗ trợ trả hàng kết thúc vào ngày 16 tháng 6 năm 2026.",
+    "agent_latency": 253.1179,
+    "judge_latency": 0.0,
+    "total_latency": 253.1179,
+    "judge": {
+      "final_score": 5.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "judge_strict": 5.0,
+        "judge_semantic": 5.0
+      },
+      "resolution": "auto_pass_no_expected_contains",
+      "rubrics": {
+        "information_coverage": "1-5: answer contains the semantic meaning of all required expected_contains elements.",
+        "correct_status": "Status matches expected status."
+      },
+      "reasoning": {
+        "judge_strict": "No constraints",
+        "judge_semantic": "No constraints"
+      }
+    },
+    "status": "pass"
+  },
+  {
+    "id": "Q13",
+    "question": "Đơn hàng 2058 nếu khách đổi ý thì có thể trả trong bao lâu?",
+    "expected_route": [
+      "data",
+      "policy"
+    ],
+    "expected_status": "ok",
+    "expected_contains": [],
+    "actual_route": {
+      "status": "ok",
+      "needs_policy": true,
+      "needs_data": true,
+      "clarification_question": null
+    },
+    "actual_status": "ok",
+    "status_match": true,
+    "final_answer": "Answer: Đơn hàng 2058 của bạn có thể được trả trong vòng 15 ngày kể từ khi đơn hàng này đã được giao thành công. Theo thông tin, đơn hàng 2058 đã được giao vào ngày 2026-06-01T17:10 và thời gian hỗ trợ hoàn trả là đến ngày 2026-06-16.",
+    "agent_latency": 314.8925,
+    "judge_latency": 0.0,
+    "total_latency": 314.8925,
+    "judge": {
+      "final_score": 5.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "judge_strict": 5.0,
+        "judge_semantic": 5.0
+      },
+      "resolution": "auto_pass_no_expected_contains",
+      "rubrics": {
+        "information_coverage": "1-5: answer contains the semantic meaning of all required expected_contains elements.",
+        "correct_status": "Status matches expected status."
+      },
+      "reasoning": {
+        "judge_strict": "No constraints",
+        "judge_semantic": "No constraints"
+      }
+    },
+    "status": "pass"
+  },
+  {
+    "id": "Q14",
+    "question": "Đơn hàng 1971 đang giao thì nên trả hàng hay từ chối nhận?",
+    "expected_route": [
+      "data",
+      "policy"
+    ],
+    "expected_status": "ok",
+    "expected_contains": [],
+    "actual_route": {
+      "status": "ok",
+      "needs_policy": true,
+      "needs_data": true,
+      "clarification_question": null
+    },
+    "actual_status": "ok",
+    "status_match": true,
+    "final_answer": "Answer: Đơn hàng 1971 đang trong quá trình giao (in_transit), do đó không thể thực hiện việc trả hàng. Tuy nhiên, bạn có thể từ chối nhận đơn hàng này nếu khách hàng đồng ý. Trong trường hợp này, nên xem xét tình huống cụ thể và thỏa thuận với khách hàng để tìm giải pháp phù hợp.\n\nEvidence:\n- Policy: Đơn hàng đang giao (in_transit) có thể được hỗ trợ hủy hoặc từ chối nhận trong một số trường hợp.\n- Order data: Đơn hàng 1971 hiện đang ở trạng thái 'in_transit'.",
+    "agent_latency": 318.1442,
+    "judge_latency": 0.0,
+    "total_latency": 318.1442,
+    "judge": {
+      "final_score": 5.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "judge_strict": 5.0,
+        "judge_semantic": 5.0
+      },
+      "resolution": "auto_pass_no_expected_contains",
+      "rubrics": {
+        "information_coverage": "1-5: answer contains the semantic meaning of all required expected_contains elements.",
+        "correct_status": "Status matches expected status."
+      },
+      "reasoning": {
+        "judge_strict": "No constraints",
+        "judge_semantic": "No constraints"
+      }
+    },
+    "status": "pass"
+  },
+  {
+    "id": "Q15",
+    "question": "Voucher của tôi còn dùng được không?",
+    "expected_route": [],
+    "expected_status": "clarification_needed",
+    "expected_contains": [],
+    "actual_route": {
+      "status": "clarification_needed",
+      "needs_policy": false,
+      "needs_data": true,
+      "clarification_question": "Bạn có thể cung cấp ID đơn hàng hoặc thông tin tài khoản để tôi kiểm tra được không?"
+    },
+    "actual_status": "clarification_needed",
+    "status_match": true,
+    "final_answer": "Status: clarification_needed\nQuestion: Bạn có thể cung cấp ID đơn hàng hoặc thông tin tài khoản để tôi kiểm tra được không?",
+    "agent_latency": 31.9414,
+    "judge_latency": 0.0,
+    "total_latency": 31.9414,
+    "judge": {
+      "final_score": 5.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "judge_strict": 5.0,
+        "judge_semantic": 5.0
+      },
+      "resolution": "auto_pass_no_expected_contains",
+      "rubrics": {
+        "information_coverage": "1-5: answer contains the semantic meaning of all required expected_contains elements.",
+        "correct_status": "Status matches expected status."
+      },
+      "reasoning": {
+        "judge_strict": "No constraints",
+        "judge_semantic": "No constraints"
+      }
+    },
+    "status": "pass"
+  },
+  {
+    "id": "Q16",
+    "question": "Đơn hàng của tôi có được hoàn trả không?",
+    "expected_route": [],
+    "expected_status": "clarification_needed",
+    "expected_contains": [],
+    "actual_route": {
+      "status": "clarification_needed",
+      "needs_policy": true,
+      "needs_data": true,
+      "clarification_question": "Xin hãy cung cấp số đơn hàng của bạn để tôi có thể kiểm tra thông tin chi tiết."
+    },
+    "actual_status": "clarification_needed",
+    "status_match": true,
+    "final_answer": "Status: clarification_needed\nQuestion: Xin hãy cung cấp số đơn hàng của bạn để tôi có thể kiểm tra thông tin chi tiết.",
+    "agent_latency": 58.3294,
+    "judge_latency": 0.0,
+    "total_latency": 58.3294,
+    "judge": {
+      "final_score": 5.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "judge_strict": 5.0,
+        "judge_semantic": 5.0
+      },
+      "resolution": "auto_pass_no_expected_contains",
+      "rubrics": {
+        "information_coverage": "1-5: answer contains the semantic meaning of all required expected_contains elements.",
+        "correct_status": "Status matches expected status."
+      },
+      "reasoning": {
+        "judge_strict": "No constraints",
+        "judge_semantic": "No constraints"
+      }
+    },
+    "status": "pass"
+  },
+  {
+    "id": "Q17",
+    "question": "Kiểm tra đơn hàng 9999 giúp tôi",
+    "expected_route": [
+      "data"
+    ],
+    "expected_status": "not_found",
+    "expected_contains": [],
+    "actual_route": {
+      "status": "ok",
+      "needs_policy": false,
+      "needs_data": true,
+      "clarification_question": null
+    },
+    "actual_status": "ok",
+    "status_match": false,
+    "final_answer": "Status: not_found\nMessage: Đơn hàng với ID 9999 không tồn tại.",
+    "agent_latency": 195.5355,
+    "judge_latency": 0.0,
+    "total_latency": 195.5355,
+    "judge": {
+      "final_score": 2.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "judge_strict": 5.0,
+        "judge_semantic": 5.0
+      },
+      "resolution": "auto_pass_no_expected_contains",
+      "rubrics": {
+        "information_coverage": "1-5: answer contains the semantic meaning of all required expected_contains elements.",
+        "correct_status": "Status matches expected status."
+      },
+      "reasoning": {
+        "judge_strict": "No constraints",
+        "judge_semantic": "No constraints"
+      }
+    },
+    "status": "fail"
+  },
+  {
+    "id": "Q18",
+    "question": "Cho tôi xem voucher của khách hàng C999",
+    "expected_route": [
+      "data"
+    ],
+    "expected_status": "not_found",
+    "expected_contains": [],
+    "actual_route": {
+      "status": "clarification_needed",
+      "needs_policy": false,
+      "needs_data": true,
+      "clarification_question": "Xin vui lòng cung cấp ID đơn hàng để tôi có thể kiểm tra voucher của bạn."
+    },
+    "actual_status": "clarification_needed",
+    "status_match": false,
+    "final_answer": "Status: clarification_needed\nQuestion: Xin vui lòng cung cấp ID đơn hàng để tôi có thể kiểm tra voucher của bạn.",
+    "agent_latency": 60.1048,
+    "judge_latency": 0.0,
+    "total_latency": 60.1049,
+    "judge": {
+      "final_score": 2.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "judge_strict": 5.0,
+        "judge_semantic": 5.0
+      },
+      "resolution": "auto_pass_no_expected_contains",
+      "rubrics": {
+        "information_coverage": "1-5: answer contains the semantic meaning of all required expected_contains elements.",
+        "correct_status": "Status matches expected status."
+      },
+      "reasoning": {
+        "judge_strict": "No constraints",
+        "judge_semantic": "No constraints"
+      }
+    },
+    "status": "fail"
+  },
+  {
+    "id": "Q19",
+    "question": "Customer C014 có những đơn nào gần đây?",
+    "expected_route": [
+      "data"
+    ],
+    "expected_status": "ok",
+    "expected_contains": [],
+    "actual_route": {
+      "status": "ok",
+      "needs_policy": false,
+      "needs_data": true,
+      "clarification_question": null
+    },
+    "actual_status": "ok",
+    "status_match": true,
+    "final_answer": "Answer: Khách hàng C014 có những đơn gần đây như sau:\n- Đơn hàng số 2058 đã được giao thành công và vẫn còn trong thời gian hỗ trợ trả hàng.\n- Đơn hàng số 2230 đang trong quá trình vận chuyển, chưa được giao.\n- Đơn hàng số 2218 cũng đang chờ vận chuyển.\n- Đơn hàng số 2212 đang trên đường giao đến người nhận.",
+    "agent_latency": 209.5146,
+    "judge_latency": 0.0,
+    "total_latency": 209.5146,
+    "judge": {
+      "final_score": 5.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "judge_strict": 5.0,
+        "judge_semantic": 5.0
+      },
+      "resolution": "auto_pass_no_expected_contains",
+      "rubrics": {
+        "information_coverage": "1-5: answer contains the semantic meaning of all required expected_contains elements.",
+        "correct_status": "Status matches expected status."
+      },
+      "reasoning": {
+        "judge_strict": "No constraints",
+        "judge_semantic": "No constraints"
+      }
+    },
+    "status": "pass"
+  },
+  {
+    "id": "Q20",
+    "question": "Phương thức giao nhanh có thể bị chuyển sang giao tiêu chuẩn khi nào?",
+    "expected_route": [
+      "policy"
+    ],
+    "expected_status": "ok",
+    "expected_contains": [],
+    "actual_route": {
+      "status": "ok",
+      "needs_policy": true,
+      "needs_data": false,
+      "clarification_question": null
+    },
+    "actual_status": "ok",
+    "status_match": true,
+    "final_answer": "Answer: Phương thức giao nhanh có thể bị chuyển sang giao tiêu chuẩn khi shop bàn giao chậm, sản phẩm vượt kích thước hoặc khối lượng cho phép, hoặc phát sinh rủi ro vận hành từ đơn vị vận chuyển. Theo chính sách, các điều kiện này phải được thỏa mãn trước khi chuyển đổi phương thức giao hàng.",
+    "agent_latency": 132.7123,
+    "judge_latency": 0.0,
+    "total_latency": 132.7123,
+    "judge": {
+      "final_score": 5.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "judge_strict": 5.0,
+        "judge_semantic": 5.0
+      },
+      "resolution": "auto_pass_no_expected_contains",
+      "rubrics": {
+        "information_coverage": "1-5: answer contains the semantic meaning of all required expected_contains elements.",
+        "correct_status": "Status matches expected status."
+      },
+      "reasoning": {
+        "judge_strict": "No constraints",
+        "judge_semantic": "No constraints"
+      }
+    },
+    "status": "pass"
+  },
+  {
+    "id": "Q21",
+    "question": "Khách hàng C001 tối đa dùng bao nhiêu voucher mỗi tháng?",
+    "expected_route": [
+      "data"
+    ],
+    "expected_status": "ok",
+    "expected_contains": [],
+    "actual_route": {
+      "status": "clarification_needed",
+      "needs_policy": true,
+      "needs_data": false,
+      "clarification_question": "Bạn có thể cung cấp thông tin về ID đơn hàng hoặc chi tiết khác để tôi có thể kiểm tra chính xác hơn không?"
+    },
+    "actual_status": "clarification_needed",
+    "status_match": false,
+    "final_answer": "Status: clarification_needed\nQuestion: Bạn có thể cung cấp thông tin về ID đơn hàng hoặc chi tiết khác để tôi có thể kiểm tra chính xác hơn không?",
+    "agent_latency": 38.2811,
+    "judge_latency": 0.0,
+    "total_latency": 38.2811,
+    "judge": {
+      "final_score": 2.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "judge_strict": 5.0,
+        "judge_semantic": 5.0
+      },
+      "resolution": "auto_pass_no_expected_contains",
+      "rubrics": {
+        "information_coverage": "1-5: answer contains the semantic meaning of all required expected_contains elements.",
+        "correct_status": "Status matches expected status."
+      },
+      "reasoning": {
+        "judge_strict": "No constraints",
+        "judge_semantic": "No constraints"
+      }
+    },
+    "status": "fail"
+  },
+  {
+    "id": "Q22",
+    "question": "Đơn hàng 2058 có liên quan gì đến cửa sổ trả hàng 15 ngày trong policy không?",
+    "expected_route": [
+      "data",
+      "policy"
+    ],
+    "expected_status": "ok",
+    "expected_contains": [],
+    "actual_route": {
+      "status": "ok",
+      "needs_policy": true,
+      "needs_data": true,
+      "clarification_question": null
+    },
+    "actual_status": "ok",
+    "status_match": true,
+    "final_answer": "Answer: Đơn hàng 2058 có liên quan đến cửa sổ trả hàng 15 ngày theo chính sách. Theo thông tin từ policy và data, đơn hàng này vẫn trong thời gian chấp nhận yêu cầu trả hàng nếu đã được cập nhật giao hàng thành công trong vòng 15 ngày kể từ khi đơn hàng được giao vào 2026-06-01T17:10.",
+    "agent_latency": 182.7543,
+    "judge_latency": 0.0,
+    "total_latency": 182.7543,
+    "judge": {
+      "final_score": 5.0,
+      "agreement_rate": 1.0,
+      "individual_scores": {
+        "judge_strict": 5.0,
+        "judge_semantic": 5.0
+      },
+      "resolution": "auto_pass_no_expected_contains",
+      "rubrics": {
+        "information_coverage": "1-5: answer contains the semantic meaning of all required expected_contains elements.",
+        "correct_status": "Status matches expected status."
+      },
+      "reasoning": {
+        "judge_strict": "No constraints",
+        "judge_semantic": "No constraints"
+      }
+    },
+    "status": "pass"
+  }
+]

@@ -1,0 +1,39 @@
+{
+  "metadata": {
+    "version": "Agent_V2_Optimized",
+    "total": 59,
+    "timestamp": "2026-06-16 22:21:57",
+    "uses_multi_judge": true,
+    "uses_retrieval_metrics": true
+  },
+  "metrics": {
+    "avg_score": 4.50678,
+    "pass_rate": 0.932203,
+    "hit_rate": 1.0,
+    "mrr": 1.0,
+    "precision_at_k": 0.347458,
+    "ndcg": 0.993443,
+    "faithfulness": 1.0,
+    "relevancy": 0.661186,
+    "agreement_rate": 0.931356,
+    "avg_latency_seconds": 1.997931,
+    "total_tokens": 13783,
+    "total_estimated_cost_usd": 0.002066
+  },
+  "release_gate": {
+    "decision": "APPROVE",
+    "reasons": [],
+    "thresholds": {
+      "avg_score": ">= 4.0",
+      "hit_rate": ">= 0.9",
+      "agreement_rate": ">= 0.7",
+      "avg_latency_seconds": "<= 2.4"
+    }
+  },
+  "regression": {
+    "baseline_version": "Agent_V1_Base",
+    "candidate_version": "Agent_V2_Optimized",
+    "avg_score_delta": 3.409322,
+    "quality_regressed": false
+  }
+}

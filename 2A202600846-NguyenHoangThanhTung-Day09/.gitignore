@@ -1,0 +1,18 @@
+.env
+solution/
+lab.txt
+scripts/
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+src/.chroma/
+src/artifacts/
+
+# Generated Data & Traces
+data/chroma_db/
+outputs/
+
+# IDE
+.idea/
+.vscode/
